@@ -7,5 +7,6 @@
         <page name='BST'/>
         <page name='Recursion'/>
         <page name='Int to String'/>
+        <page name='AlphabetCode'/>
     </pages>
 </playground>
