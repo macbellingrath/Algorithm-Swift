@@ -82,7 +82,7 @@ solution.solve(n: 0)
 
 /* test case three
  input: 979
- should return 0
+ should return 3
  1 - null 9
  2 - 9 null
  3 - 9 7 9 
