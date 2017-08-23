@@ -11,5 +11,6 @@
         <page name='Add Linked Lists'/>
         <page name='Untitled Page'/>
         <page name='Find Rectangle in Matrix 2D'/>
+        <page name='Merge Two Sorted Lists'/>
     </pages>
 </playground>
