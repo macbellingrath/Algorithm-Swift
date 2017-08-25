@@ -56,18 +56,16 @@ class Solution {
     }
 
     func length(ofLongestSubstring s: String) -> Int {
-        var n = s.characters.count
-        var answer = 0
-        var index: [Character: String.Index] = [:]
+        var index: [Character: Int] = [:]
 
         var j = s.startIndex
-        var i = 0
+        var i = s.startIndex
 
         while j < s.endIndex {
-            i = max(index[s.characters[j]], i)
+
         }
 
-        return answer
+        return s.distance(from: j, to: j)
     }
 }
 

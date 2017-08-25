@@ -13,5 +13,6 @@
         <page name='Find Rectangle in Matrix 2D'/>
         <page name='Merge Two Sorted Lists'/>
         <page name='Longest Substring Without Repeating Characters'/>
+        <page name='Reverse Int'/>
     </pages>
 </playground>
