@@ -14,5 +14,6 @@
         <page name='Merge Two Sorted Lists'/>
         <page name='Longest Substring Without Repeating Characters'/>
         <page name='Reverse Int'/>
+        <page name='Palindrome Ints'/>
     </pages>
 </playground>
