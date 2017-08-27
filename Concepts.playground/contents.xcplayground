@@ -15,5 +15,7 @@
         <page name='Longest Substring Without Repeating Characters'/>
         <page name='Reverse Int'/>
         <page name='Palindrome Ints'/>
+        <page name='Number Complement'/>
+        <page name='3 Sum'/>
     </pages>
 </playground>
