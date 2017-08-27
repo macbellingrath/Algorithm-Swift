@@ -4,6 +4,10 @@ import Foundation
 
 class Solution {
     func threeSum(_ nums: [Int]) -> [[Int]] {
+        guard nums.count > 2 else {
+            return []
+        }
+
         let xs = nums.sorted()
         var answer:[[Int]] = []
 
