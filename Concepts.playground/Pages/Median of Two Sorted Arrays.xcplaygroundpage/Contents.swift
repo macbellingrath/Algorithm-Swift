@@ -24,10 +24,9 @@ class Solution {
 
 
 
-let testInput: ([Int], [Int]) = ([1],[3,4])
+let testcase1: ([Int], [Int]) = ([1],[3,4])
 let testcase2: ([Int], [Int]) = ([1, 3], [2])
 let s = Solution()
-// print(s.findMedianSortedArrays(testInput.0, testInput.1))
 print(s.findMedianSortedArrays(testcase2.0, testcase2.1))
 
 
