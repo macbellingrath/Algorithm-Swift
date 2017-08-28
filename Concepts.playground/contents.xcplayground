@@ -9,7 +9,7 @@
         <page name='Int to String'/>
         <page name='AlphabetCode'/>
         <page name='Add Linked Lists'/>
-        <page name='Untitled Page'/>
+        <page name='2Sum'/>
         <page name='Find Rectangle in Matrix 2D'/>
         <page name='Merge Two Sorted Lists'/>
         <page name='Longest Substring Without Repeating Characters'/>
@@ -22,5 +22,6 @@
         <page name='Number Of Non Zeros'/>
         <page name='String Decode'/>
         <page name='Valid Parens'/>
+        <page name='Reverse Linked List'/>
     </pages>
 </playground>
