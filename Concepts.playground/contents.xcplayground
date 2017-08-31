@@ -26,5 +26,6 @@
         <page name='Divide'/>
         <page name='Bitshift'/>
         <page name='Merge Sort'/>
+        <page name='Most Water'/>
     </pages>
 </playground>
