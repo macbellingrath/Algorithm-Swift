@@ -28,5 +28,6 @@
         <page name='Merge Sort'/>
         <page name='Most Water'/>
         <page name='Swap List'/>
+        <page name='Roman to Int'/>
     </pages>
 </playground>
