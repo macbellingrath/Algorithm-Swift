@@ -117,11 +117,42 @@ class Solution {
 
         return head
     }
+
+    func otherOtherReverse(head: Node) -> Node {
+        var head = head
+
+        var previous: Node?
+        var current = head
+        var next = head.next
+
+        while next != nil {
+            current.next = next!.next
+            next!.next = current
+
+            if previous == nil {
+                head     = next!
+                previous = next!.next
+            } else {
+                previous!.next = next!
+                previous =  previous!.next?.next
+            }
+
+            guard let afterCurrent = current.next else {
+                break
+            }
+
+            current = afterCurrent
+            next    = next!.next?.next?.next
+
+        }
+
+        return head
+    }
 }
 
 let s = Solution()
 //print(s.reverse(head: head))
 
-print(s.otherReverse(head: head))
-
+//print(s.otherReverse(head: head))
+print(s.otherOtherReverse(head: head))
 //: [Next](@next)
