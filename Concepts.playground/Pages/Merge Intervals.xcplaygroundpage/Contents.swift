@@ -18,9 +18,7 @@ class Solution {
         }
 
         // O(n log n)
-        var sorted = intervals.sorted { r1, r2 in
-            r1.start < r2.start
-        }
+        let sorted = intervals.sorted { $0.start < $1.start }
 
         var answer: [Interval] = []
 
@@ -34,11 +32,11 @@ class Solution {
                 answer.append(Interval(start, end))
 
                 start = interval.start
-                end = interval.end
+                end   = interval.end
             }
         }
 
-        answer.append(Interval.init(start, end))
+        answer.append(Interval(start, end))
 
         return answer
     }
