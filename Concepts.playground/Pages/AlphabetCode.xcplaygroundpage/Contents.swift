@@ -16,7 +16,51 @@ import Foundation
 
  */
 
+class Node {
+    let value: String
+    var left: Node?
+    var right: Node?
+
+    init(value: String) {
+        self.value = value
+    }
+}
+
+class OtherSolution {
+    func permute(_ nums: [Int]) -> [[Int]] {
+        var result: [[Int]] = []
+        var nums = nums
+        permuteRecursive(&nums, begin: 0, result: &result)
+
+        return result
+    }
+
+    func permuteRecursive(_ nums: inout [Int], begin: Int, result: inout [[Int]]) {
+        if begin >= nums.count {
+            result.append(nums)
+            return
+        }
+
+        for i in begin..<nums.count {
+            _swap(&nums[begin], &nums[i])
+            permuteRecursive(&nums, begin: begin + 1, result: &result)
+            _swap(&nums[begin], &nums[i])
+        }
+    }
+
+    // swift fatals when swapping same element
+    private func _swap<T: Equatable>(_ x: inout T, _ y: inout T) {
+        if x == y { return }
+        swap(&x, &y)
+    }
+
+}
+
 class Solution {
+
+    func solveWithTree(n: Int) -> Int {
+        return 0
+    }
 
     func solve(n: Int) -> Int {
         if n <= 0 {
@@ -92,5 +136,7 @@ solution.solve(n: 979) // is returning 17????
 
 
 
+let o = OtherSolution()
+print(o.permute([1,2,3]).count)
 
 //: [Next](@next)
