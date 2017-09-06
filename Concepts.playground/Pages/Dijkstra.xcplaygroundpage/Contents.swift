@@ -42,6 +42,7 @@ class Dijkstra<T: Hashable> {
     }
 
     func traverse(source: Vertex<T>) {
+
         reset()
 
         source.pathLengthFromStart = 0

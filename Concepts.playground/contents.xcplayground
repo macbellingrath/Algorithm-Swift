@@ -35,5 +35,6 @@
         <page name='Merge Intervals'/>
         <page name='Most Points'/>
         <page name='Dijkstra'/>
+        <page name='Search Insert Position '/>
     </pages>
 </playground>

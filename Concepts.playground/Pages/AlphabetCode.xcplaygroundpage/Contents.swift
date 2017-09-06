@@ -108,6 +108,8 @@ input: 1111
 
 solution.solve(n: 1111)
 
+
+print(UserDefaults.standard == UserDefaults())
 /* test case two
  input: 0
  should return 0
@@ -128,6 +130,6 @@ solution.solve(n: 979) // is returning 17????
 
 
 let o = OtherSolution()
-print(o.permute([1,2,2,2]).count)
+print(o.permute([1,1,1,1]).count)
 
 //: [Next](@next)
