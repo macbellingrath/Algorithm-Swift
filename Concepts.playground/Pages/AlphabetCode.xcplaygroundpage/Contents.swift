@@ -16,15 +16,6 @@ import Foundation
 
  */
 
-class Node {
-    let value: String
-    var left: Node?
-    var right: Node?
-
-    init(value: String) {
-        self.value = value
-    }
-}
 
 class OtherSolution {
     func permute(_ nums: [Int]) -> [[Int]] {
@@ -137,6 +128,6 @@ solution.solve(n: 979) // is returning 17????
 
 
 let o = OtherSolution()
-print(o.permute([1,2,3]).count)
+print(o.permute([1,2,2,2]).count)
 
 //: [Next](@next)

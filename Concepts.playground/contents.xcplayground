@@ -34,5 +34,6 @@
         <page name='Longest Common Prefix'/>
         <page name='Merge Intervals'/>
         <page name='Most Points'/>
+        <page name='Dijkstra'/>
     </pages>
 </playground>
