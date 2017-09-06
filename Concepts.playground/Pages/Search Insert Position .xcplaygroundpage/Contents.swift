@@ -31,11 +31,35 @@ class Solution {
             }
         }
 
+
         // not found so we return the left pointer
         return left
     }
 }
 
+func binarySearch<T: Comparable>(elements: [T], target: T) -> Int? {
+    var left = 0
+    var right = elements.count - 1
+
+    while left <= right {
+        let mid = left + (right - left) / 2
+
+        if elements[mid] == target {
+            return mid
+        }
+
+        if elements[mid] < target {
+            left  = mid + 1
+        } else {
+            right = mid - 1
+        }
+    }
+    return nil
+}
+
+
+
 let s = Solution()
 s.searchInsert([4,5,5,6,9,10], 6)
+binarySearch(elements: [1,2,3], target: 3)
 //: [Next](@next)
