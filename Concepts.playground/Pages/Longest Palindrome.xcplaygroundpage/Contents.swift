@@ -28,35 +28,40 @@ import Foundation
 
 class Solution {
     func longestPalindrome(_ s: String) -> String {
-        let s = s as NSString
-
         var start = 0, end = 0
+        let _s = Array(s.characters)
 
-        for i in 0..<s.length {
+        var start = s.startIndex, end = s.startIndex
 
-            let len1 = expandAroundCenters(s, left: i, right: i)
-            let len2 = expandAroundCenters(s, left: i, right: i + 1)
+        for i in s.characters.indices {
+            let len1 = expandAroundCenter(s, l: i, r: i)
+            let len2 = expandAroundCenter(s, l: i, r: s.index(after: i))
+
             let len = max(len1, len2)
+            let distance = s.distance(from: end, to: start)
 
-            if len > end - start {
-                start = i - (len - 1) / 2
-                end = i + len / 2
+            if len > distance {
+                start = s.index(i, offsetBy: -(len - 1) / 2)
+                end = s.index(i, offsetBy: len / 2)
             }
         }
 
-        return s.substring(with: NSRange(location: start, length: end + 1))
+        return s[start...end]
     }
 
-    private func expandAroundCenters(_ s: NSString, left: Int, right: Int) -> Int {
-        var l = left, r = right
+    private func expandAroundCenter(_ s: String, l: String.CharacterView.Index, r: String.CharacterView.Index) -> String.IndexDistance {
+        var left = l
+        var right = r
 
-        while (l >= 0 && r < s.length && s.character(at: l) == s.character(at: r)) {
-            l -= 1
-            r += 1
+        while l >= s.startIndex && r < s.endIndex && s[left] == s[right] {
+            left  = s.index(before: left)
+            right = s.index(after: right)
         }
 
-        return r - l - 1
+        return s.distance(from: right, to: left)
     }
+
+
 }
 
 let s = Solution()

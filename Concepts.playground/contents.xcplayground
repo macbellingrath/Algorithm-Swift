@@ -36,5 +36,6 @@
         <page name='Most Points'/>
         <page name='Dijkstra'/>
         <page name='Search Insert Position '/>
+        <page name='Knapsack'/>
     </pages>
 </playground>
