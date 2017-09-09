@@ -31,40 +31,38 @@ class Solution {
         var start = 0, end = 0
         let _s = Array(s.characters)
 
-        var start = s.startIndex, end = s.startIndex
+        for i in 0..<_s.count {
+            let len1 = expandAroundCenter(_s, l: i, r: i)
 
-        for i in s.characters.indices {
-            let len1 = expandAroundCenter(s, l: i, r: i)
-            let len2 = expandAroundCenter(s, l: i, r: s.index(after: i))
+            let len2 = expandAroundCenter(_s, l: i, r: i + 1)
 
             let len = max(len1, len2)
-            let distance = s.distance(from: end, to: start)
-
-            if len > distance {
-                start = s.index(i, offsetBy: -(len - 1) / 2)
-                end = s.index(i, offsetBy: len / 2)
+            if len > (end - start) {
+                start = i - (len - 1) / 2
+                end = i + len / 2
             }
         }
 
-        return s[start...end]
+        return String(_s[start...end])
     }
 
-    private func expandAroundCenter(_ s: String, l: String.CharacterView.Index, r: String.CharacterView.Index) -> String.IndexDistance {
+    private func expandAroundCenter(_ s: [Character], l: Int, r: Int) -> Int {
+
         var left = l
         var right = r
 
-        while l >= s.startIndex && r < s.endIndex && s[left] == s[right] {
-            left  = s.index(before: left)
-            right = s.index(after: right)
+
+        while (left >= 0 && right < s.count) && s[left] == s[right] {
+            left  -= 1
+            right += 1
         }
 
-        return s.distance(from: right, to: left)
+
+        return right - left - 1
     }
-
-
 }
 
 let s = Solution()
-s.longestPalindrome("babad")
+s.longestPalindrome("racecar")
 
 //: [Next](@next)

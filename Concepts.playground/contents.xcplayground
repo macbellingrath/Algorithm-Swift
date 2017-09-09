@@ -37,5 +37,7 @@
         <page name='Dijkstra'/>
         <page name='Search Insert Position '/>
         <page name='Knapsack'/>
+        <page name='POW'/>
+        <page name='StrStr'/>
     </pages>
 </playground>
