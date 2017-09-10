@@ -39,5 +39,6 @@
         <page name='Knapsack'/>
         <page name='POW'/>
         <page name='StrStr'/>
+        <page name='Find Range'/>
     </pages>
 </playground>
