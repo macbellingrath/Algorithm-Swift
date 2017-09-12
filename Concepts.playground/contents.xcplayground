@@ -40,5 +40,10 @@
         <page name='POW'/>
         <page name='StrStr'/>
         <page name='Find Range'/>
+        <page name='Common Superview'/>
+        <page name='Stock Prices'/>
+        <page name='Move Zeros'/>
+        <page name='Add Binary'/>
+        <page name='Deep Copy Tree'/>
     </pages>
 </playground>
