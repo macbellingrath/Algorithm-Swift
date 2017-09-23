@@ -45,5 +45,7 @@
         <page name='Move Zeros'/>
         <page name='Add Binary'/>
         <page name='Deep Copy Tree'/>
+        <page name='Print Columns'/>
+        <page name='Min Differences'/>
     </pages>
 </playground>
