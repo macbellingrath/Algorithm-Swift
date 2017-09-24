@@ -2,40 +2,31 @@
 
 import Foundation
 
+/*
+ 14. Longest Common Prefix
+ Write a function to find the longest common prefix string amongst an array of strings.
+ */
 class Solution {
     func longestCommonPrefix(_ strs: [String]) -> String {
-        if strs.isEmpty { return "" }
-
-        var minLength = Int.max
-
-        for s in strs {
-            minLength = min(minLength, s.characters.count)
+        if strs.isEmpty {
+            return ""
         }
 
-        var low = 1
-        var high = minLength
-        while low <= high {
-            let middle = (low + high) / 2
-            low = isCommonPrefix(strs: strs, length: middle) ? middle + 1 : middle - 1
-        }
-
-        let str = strs[0]
-        return str.substring(to: str.index(str.startIndex, offsetBy: (low + high / 2)))
-    }
-
-    private func isCommonPrefix(strs: [String], length: Int) -> Bool {
-        let str = strs[0].substring(with: Range<String.Index>.init(uncheckedBounds: (lower: strs[0].startIndex, upper: strs[0].endIndex)))
+        var prefix = strs[0]
 
         for i in 1..<strs.count {
-            if !strs[i].hasPrefix(str) {
-                return false
+            while let index = strs[i].range(of: prefix)?.lowerBound, index != strs[i].startIndex {
+                prefix = String(prefix[..<prefix.endIndex])
+                if prefix.isEmpty { return "" }
             }
         }
 
-        return true
+
+        return String(prefix)
     }
 }
 
 let s = Solution()
-s.longestCommonPrefix(["car", "cars", "caring"])
+print(s.longestCommonPrefix(["car", "cars", "caring"]))
+print(s.longestCommonPrefix(["a","b" ]))
 //: [Next](@next)
