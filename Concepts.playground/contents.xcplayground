@@ -47,5 +47,6 @@
         <page name='Deep Copy Tree'/>
         <page name='Print Columns'/>
         <page name='Min Differences'/>
+        <page name='3 Sum Closest'/>
     </pages>
 </playground>
