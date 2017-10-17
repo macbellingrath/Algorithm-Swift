@@ -7,32 +7,30 @@ import Foundation
  Write a function to find the longest common prefix string amongst an array of strings.
  */
 class Solution {
-    func longestCommonPrefix_Horizontal(_ strs: [String]) -> String {
+
+    /// find longest common prefix among array of string
+    ///
+    ///   Best case - O(1) (1 item) - Worst case - O(n^2) - Average - O(n)?
+    /// - Parameter strs: array of strings
+    /// - Returns: lcp
+    func longestCommonPrefix(_ strs: [String]) -> String {
+        // if count == 0
         if strs.isEmpty {
             return ""
         }
 
-        var prefix = strs[0]
-
-        for i in 1..<strs.count {
-            while let index = strs[i].range(of: prefix)?.lowerBound, index != strs[i].startIndex {
-                prefix = String(prefix[..<prefix.endIndex])
-                if prefix.isEmpty { return "" }
-            }
+        // if count == 1
+        if strs.count < 2 {
+            return strs[0]
         }
-
-
-        return String(prefix)
-    }
-
-    func longestCommonPrefix_Vertical(_ strs: [String]) -> String {
-        if strs.isEmpty { return "" }
-        if strs.count == 1 { return strs[0] }
 
         var i = strs[0].startIndex
 
-        for str in strs[1..<strs.count] {
-            while i < strs[0].endIndex && i < str.endIndex && str[i] == strs[0][i] {
+        // O(n)
+        for string in strs[1..<strs.count] {
+
+            // O(n)
+            while i < strs[0].endIndex, i < string.endIndex, strs[0][i] == string[i] {
                 i = strs[0].index(after: i)
             }
         }
@@ -42,9 +40,8 @@ class Solution {
 }
 
 let s = Solution()
-//print(s.longestCommonPrefix_Horizontal(["car", "cars", "caring"]))
-//print(s.longestCommonPrefix_Horizontal(["a","b" ]))
 
-print(s.longestCommonPrefix_Vertical(["car", "cars", "caring"]))
-print(s.longestCommonPrefix_Vertical(["aa", "a"]))
+
+print(s.longestCommonPrefix(["car", "cars", "caring"]))
+
 //: [Next](@next)
