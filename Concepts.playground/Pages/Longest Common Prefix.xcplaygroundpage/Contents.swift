@@ -25,17 +25,19 @@ class Solution {
         }
 
         var i = strs[0].startIndex
-
         // O(n)
-        for string in strs[1..<strs.count] {
-
-            // O(n)
-            while i < strs[0].endIndex, i < string.endIndex, strs[0][i] == string[i] {
-                i = strs[0].index(after: i)
+        outer: while i < strs[0].endIndex {
+            // O(n - 1)
+            for s in strs[1..<strs.count] {
+                if i >= s.endIndex || s[i] != strs[0][i] {
+                   break outer
+                }
             }
+
+            i = strs[0].index(after: i)
         }
 
-        return String(strs[0][strs[0].startIndex..<i])
+        return String(strs[0].substring(to: i))
     }
 }
 
@@ -43,5 +45,8 @@ let s = Solution()
 
 
 print(s.longestCommonPrefix(["car", "cars", "caring"]))
+// test case ["a","a","b"]
+print(s.longestCommonPrefix(["a", "a", "b"]))
+print(s.longestCommonPrefix(["aa", "a"]))
 
 //: [Next](@next)
