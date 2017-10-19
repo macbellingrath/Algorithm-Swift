@@ -39,7 +39,6 @@ for i in 2...11 {
 
 
 
-
 class Solution {
     // example
     // input: 1 -> 2 -> 3 -> 4 -> 5
