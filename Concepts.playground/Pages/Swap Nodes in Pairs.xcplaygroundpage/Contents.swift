@@ -2,18 +2,6 @@
 
 import Foundation
 
-/**
- * Definition for singly-linked list.
- */
- class ListNode {
-     var val: Int
-     var next: ListNode?
-
-    init(_ val: Int) {
-        self.val = val
-     }
- }
-
  class Solution {
 
     /// Given a linked list, swap every two adjacent nodes and return its head.
@@ -21,26 +9,22 @@ import Foundation
     /// - Parameter head: head node
     /// - Returns: the head node of the new list
     func swapPairs(_ head: ListNode?) -> ListNode? {
-        //  n == 1
-        if head?.next == nil {
-            return head
+        let toReturn = head?.next
+
+        var one = head
+        var two = head?.next
+
+        while two != nil {
+            let temp = two?.next
+             two?.next = one
+            one?.next = temp
+
+            one = temp?.next
+            two = temp?.next?.next
         }
 
-        var dummy = head!.next!
 
-        var previous: ListNode? //
-        var current: ListNode? = head //1
-
-        while let next = current?.next {
-            var temp = next.next
-            current?.next = previous // 1.next = nil
-            next.next = current // 2.next = 1
-
-            previous = current // move slow pointer
-            current = temp
-        }
-
-        return dummy
+        return toReturn
     }
 }
 
@@ -58,7 +42,7 @@ for i in 0..<input.count - 1 {
 }
 
 func printList(_ head: ListNode?) {
-    print(head?.val)
+    print(head!.val)
     var h = head
     while let next = h?.next {
         print(next.val)

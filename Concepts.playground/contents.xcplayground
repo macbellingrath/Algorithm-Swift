@@ -50,5 +50,6 @@
         <page name='3 Sum Closest'/>
         <page name='17. Letter Combinations of a Phone Number'/>
         <page name='Swap Nodes in Pairs'/>
+        <page name='Remove Nth Node From List'/>
     </pages>
 </playground>
