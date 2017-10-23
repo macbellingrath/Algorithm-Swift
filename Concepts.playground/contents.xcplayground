@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false' timelineScrubberEnabled='true'>
+<playground version='6.0' target-platform='ios' display-mode='raw' timelineScrubberEnabled='true'>
     <pages>
         <page name='Index'/>
         <page name='Arrays'/>
@@ -51,5 +51,6 @@
         <page name='17. Letter Combinations of a Phone Number'/>
         <page name='Swap Nodes in Pairs'/>
         <page name='Remove Nth Node From List'/>
+        <page name='22. Generate Parentheses'/>
     </pages>
 </playground>
