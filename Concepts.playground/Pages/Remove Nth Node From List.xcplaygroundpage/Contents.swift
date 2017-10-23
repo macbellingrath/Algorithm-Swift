@@ -28,6 +28,7 @@ class Solution {
     second?.next = second?.next?.next
     return dummy.next
   }
+
 }
 
 //: [Next](@next)
