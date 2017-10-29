@@ -52,5 +52,6 @@
         <page name='Swap Nodes in Pairs'/>
         <page name='Remove Nth Node From List'/>
         <page name='22. Generate Parentheses'/>
+        <page name='226. Invert Binary Tree'/>
     </pages>
 </playground>
