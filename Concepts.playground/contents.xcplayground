@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' timelineScrubberEnabled='true'>
+<playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false' timelineScrubberEnabled='true'>
     <pages>
         <page name='Index'/>
         <page name='Arrays'/>
@@ -17,7 +17,7 @@
         <page name='Palindrome Ints'/>
         <page name='Number Complement'/>
         <page name='3 Sum'/>
-        <page name='atoi'/>
+        <page name='# 8 - atoi'/>
         <page name='Median of Two Sorted Arrays'/>
         <page name='Number Of Non Zeros'/>
         <page name='String Decode'/>
