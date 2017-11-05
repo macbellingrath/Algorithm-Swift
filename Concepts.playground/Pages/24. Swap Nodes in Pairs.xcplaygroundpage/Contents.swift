@@ -9,24 +9,19 @@ import Foundation
     /// - Parameter head: head node
     /// - Returns: the head node of the new list
     func swapPairs(_ head: ListNode?) -> ListNode? {
-        let toReturn = head?.next
-
-        var one = head
-        var two = head?.next
-
-        while two != nil {
-            let temp = two?.next
-             two?.next = one
-            one?.next = temp
-
-            one = temp?.next
-            two = temp?.next?.next
+        guard let _head = head, let next = _head.next else {
+            return head
         }
 
+        _head.next = swapPairs(next.next)
+        next.next = _head
 
-        return toReturn
+        return next
+
     }
 }
+//1234
+// 1.next = swappairs (2.next/3 => 3.next = swappairs(Nil), ), 2.next = 1, return 2;
 
 // Test cases
 let s = Solution()
