@@ -56,7 +56,7 @@ s.removeDuplicates(&input4)
 assert(input4 == [0,1,2,7,9])
 
 var input5 = [1,2,2,2,3]
-s.removeDuplicates(&input)
+s.removeDuplicates(&input5)
 assert(input5 == [1,2,3])
 
 //: [Next](@next)
