@@ -56,5 +56,6 @@
         <page name='18. 4Sum'/>
         <page name='#26 Remove Duplicates from Sorted Array'/>
         <page name='#45 Jumps Game II'/>
+        <page name='#27. Remove Occurances in Place'/>
     </pages>
 </playground>

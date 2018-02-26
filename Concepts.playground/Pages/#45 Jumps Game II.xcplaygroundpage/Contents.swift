@@ -36,10 +36,31 @@ class Solution {
     }
 
 }
+//
+import UIKit
 
 let s = Solution()
 
 let input1 = [2,3,1,1,4]
 s.jump(input1)
+
+UIActivityType.airDrop.rawValue
+
+extension UIActivityType {
+
+    var friendlyName: String {
+        return rawValue.split(separator: ".").lazy.last?.description ?? "Unknown"
+    }
+}
+
+
+UIActivityType.airDrop.friendlyName
+UIActivityType.postToFacebook.friendlyName
+UIActivityType.message.friendlyName
+UIActivityType.assignToContact.friendlyName
+UIActivityType.mail.friendlyName
+UIActivityType.print.friendlyName
+UIActivityType.saveToCameraRoll.friendlyName
+
 
 //: [Next](@next)
