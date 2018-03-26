@@ -57,5 +57,6 @@
         <page name='#26 Remove Duplicates from Sorted Array'/>
         <page name='#45 Jumps Game II'/>
         <page name='#27. Remove Occurances in Place'/>
+        <page name='#38. Count and Say'/>
     </pages>
 </playground>
