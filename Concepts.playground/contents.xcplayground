@@ -60,5 +60,6 @@
         <page name='#38. Count and Say'/>
         <page name='# 48 Rotate Image'/>
         <page name='#31. Next Permutation'/>
+        <page name='# 771. Jewels'/>
     </pages>
 </playground>

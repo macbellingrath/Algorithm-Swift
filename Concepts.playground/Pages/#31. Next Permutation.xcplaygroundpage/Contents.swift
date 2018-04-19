@@ -19,7 +19,6 @@ class Solution {
     func nextPermutation(_ nums: inout [Int]) {
         guard nums.count > 1 else { return }
 
-        // look at first number, is it highest number? , then make lowest
         var i = nums.count - 2
 
         while i > -1 && nums[i] > nums[i + 1] {
@@ -33,7 +32,6 @@ class Solution {
             }
             nums.swapAt(i, j)
         }
-
 
         var k = i + 1
         var y = nums.count - 1
@@ -60,9 +58,9 @@ solution.nextPermutation(&testTwo)
 testTwo
 testTwo == [1,2,3]
 
-var testThree = [1,1,5]
+var testThree = [1,5, 1]
 solution.nextPermutation(&testThree)
 testThree
-testThree == [1,5,1]
-
+testThree == [5,1,1]
+`
 //: [Next](@next)
