@@ -61,5 +61,6 @@
         <page name='# 48 Rotate Image'/>
         <page name='#31. Next Permutation'/>
         <page name='# 771. Jewels'/>
+        <page name='6. Zig Zag Conversion'/>
     </pages>
 </playground>
