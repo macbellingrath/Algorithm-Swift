@@ -62,5 +62,7 @@
         <page name='#31. Next Permutation'/>
         <page name='# 771. Jewels'/>
         <page name='6. Zig Zag Conversion'/>
+        <page name='33. Search in Rotated Sorted Array'/>
+        <page name='Reverse Singly Linked List'/>
     </pages>
 </playground>
