@@ -29,32 +29,32 @@ import Foundation
 */
 
 class Solution {
-    func convert(_ s: String, _ numRows: Int) -> String {
-        var answer: [[Character]] = Array(repeating: [Character](), count: numRows)
-        var characters = s.characters
 
-        let length = characters.count
-        var i = 0
+    func convert(_ s: String, _ numRows: Int) -> String {
+        if s.isEmpty { return "" }
+
+        let length = s.endIndex
+
+        var buffer: [[Character]] = Array(repeating: [Character](), count: numRows)
+        var i = s.startIndex
 
         while i < length {
             // vertically down
             for index in 0..<numRows where i < length {
-                answer[index].append(characters[i])
-                i += 1
+                buffer[index].append(s[i])
+                i = s.index(after: i)
             }
 
             // obliquely up
             for index in stride(from: numRows - 2, through: 1, by: -1) where i < length {
-                answer[index].append(characters[i])
-                i += 1
+                buffer[index].append(s[i])
+                i = s.index(after: i)
             }
         }
 
-        for index in 1..<answer.count {
-            answer[0].append(answer[index])
-        }
-
-        return String(answer[0])
+        return buffer.lazy
+            .flatMap({ $0 }) // flatten
+            .reduce("") { $0 + String($1) } // reduce
     }
 
 }
@@ -66,6 +66,6 @@ class Solution {
 
  */
 let s = Solution()
-
+s.convert("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR"
 
 //: [Next](@next)
