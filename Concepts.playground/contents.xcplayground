@@ -64,5 +64,7 @@
         <page name='6. Zig Zag Conversion'/>
         <page name='33. Search in Rotated Sorted Array'/>
         <page name='Reverse Singly Linked List'/>
+        <page name='#8. 4Sum'/>
+        <page name='#12. Int To Roman'/>
     </pages>
 </playground>
