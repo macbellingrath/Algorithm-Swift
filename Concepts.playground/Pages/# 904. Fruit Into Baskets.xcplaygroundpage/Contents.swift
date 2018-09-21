@@ -26,27 +26,31 @@ class Solution {
 
         var i = 0
         var j = 1
-        var currentFruits: Set<Int> = []
-
         while j < tree.count {
-            var temp = 0
+            var temp = 1
+            var set: Set<Int> = [tree[i]]
 
-            while currentFruits.count < 2 {
-                currentFruits.insert(tree[i])
-                currentFruits.insert(tree[j])
-            }
-
-            while j < tree.count && (tree[j] == fruitOne || tree[j] == fruitTwo) {
+            while j < tree.count && set.count < 2 && !set.contains(tree[j]) {
+                set.insert(tree[j])
                 temp += 1
                 j += 1
             }
 
+            while j < tree.count && set.contains(tree[j]) {
+                temp += 1
+                j += 1
+            }
+
+
+
             answer = max(answer, temp)
-            i = j - 1
+            i += 1
+            j = i + 1
         }
 
         return answer
     }
+
 }
 
 let s = Solution()
@@ -78,5 +82,9 @@ outputOneElement == 1
 let failingTest = [0,0,1,1]
 let failingOutput = s.totalFruit(failingTest)
 failingOutput == 4
+
+let failingTwo = [0,1,6,6,4,4,6]
+let failingTwoOutput = s.totalFruit(failingTwo)
+failingTwoOutput == 5
 
 //: [Next](@next)
