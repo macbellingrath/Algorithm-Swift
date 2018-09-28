@@ -68,5 +68,8 @@
         <page name='#12. Int To Roman'/>
         <page name='# 32. Longest Valid Parents'/>
         <page name='# 904. Fruit Into Baskets'/>
+        <page name='#39. Combination Sum'/>
+        <page name='# 42. Trap Rain Water'/>
+        <page name='# 133. Clone Graph'/>
     </pages>
 </playground>
