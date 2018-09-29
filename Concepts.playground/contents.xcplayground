@@ -71,5 +71,6 @@
         <page name='#39. Combination Sum'/>
         <page name='# 42. Trap Rain Water'/>
         <page name='# 133. Clone Graph'/>
+        <page name='Merge Ranges'/>
     </pages>
 </playground>

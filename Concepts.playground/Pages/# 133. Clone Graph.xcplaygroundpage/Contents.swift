@@ -70,7 +70,6 @@ func traverse(_ node: Node, block: (Node) -> Void) {
 }
 
 class Solution {
-
     // Original to copy since using label would break if graph contained duplicate labels
     private var map: [Node: Node] = [:]
 
@@ -99,7 +98,7 @@ let n2 = Node(2, neighbors: [n3, n4])
 let n1 = Node(1, neighbors: [n2])
 
 traverse(n1) { (node) in
-    var node = node
+    var node = node6
     withUnsafeMutablePointer(to: &node) {
         print("original = value:\($0.pointee.value), pointer: \($0)")
     }
