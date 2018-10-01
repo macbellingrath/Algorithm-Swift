@@ -72,5 +72,6 @@
         <page name='# 42. Trap Rain Water'/>
         <page name='# 133. Clone Graph'/>
         <page name='Merge Ranges'/>
+        <page name='#23. Merge k Sorted Lists'/>
     </pages>
 </playground>
