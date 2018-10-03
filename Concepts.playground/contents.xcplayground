@@ -42,7 +42,7 @@
         <page name='Find Range'/>
         <page name='Common Superview'/>
         <page name='Stock Prices'/>
-        <page name='Move Zeros'/>
+        <page name='283. Move Zeroes'/>
         <page name='Add Binary'/>
         <page name='Deep Copy Tree'/>
         <page name='Print Columns'/>
@@ -73,5 +73,8 @@
         <page name='# 133. Clone Graph'/>
         <page name='Merge Ranges'/>
         <page name='#23. Merge k Sorted Lists'/>
+        <page name='#18. 4Sum'/>
+        <page name='82. Remove Duplicates from Sorted List II'/>
+        <page name='Untitled Page'/>
     </pages>
 </playground>
