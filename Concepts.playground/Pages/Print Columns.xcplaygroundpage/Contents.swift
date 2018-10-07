@@ -18,7 +18,11 @@ func calculateHorizontalDistance(node: Node?, height: Int, map: inout [Int: [Int
     }
 
     // pre order
-    map[height]?.append(node.key)
+    if var list = map[height] {
+        list.append(node.key)
+    } else {
+        map[height] = [node.key]
+    }
 
     // left
     calculateHorizontalDistance(node: node.left, height: height - 1, map: &map)
