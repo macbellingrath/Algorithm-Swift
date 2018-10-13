@@ -23,6 +23,7 @@ func allUniqueCharacters(_ str: String) -> Bool {
 /*
  1.1 - What if you can not use additional data structures? - without additional allocations
  */
+
 func allUniqueCharacters2(_ str: String) -> Bool {
     let sorted = Array(str.characters).sorted() // though this does incurt an O(n) operation to create the Array (bc of Swift string indexing model) and average O(n log n) for the sort.
     var i = 0
@@ -36,6 +37,29 @@ func allUniqueCharacters2(_ str: String) -> Bool {
     return true
 }
 
+allUniqueCharacters2("aab")
+allUniqueCharacters2("✨✨")
+
+/* 1.2
+ Write code to reverse a C-Style String (C-String means that “abcd” is represented as five characters, including the null character )
+ */
+func reverse(string: inout String) {
+    var previous: Character?
+    var current = string.first
+
+
+}
+
+
+/* 1.3
+ Design an algorithm and write code to remove the duplicate characters in a string without using any additional buffer NOTE: One or two additional variables are fine An extra copy of the array is not
+ FOLLOW UP
+ Write the test cases for this method
+ */
+
+func dedupe(_ string: inout String) {
+
+}
 
 
 //: [Next](@next)
