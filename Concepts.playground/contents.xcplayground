@@ -77,5 +77,6 @@
         <page name='82. Remove Duplicates from Sorted List II'/>
         <page name='Trees'/>
         <page name='107. Binary Tree Level Order Traversal II'/>
+        <page name='Tree Traversal Columns'/>
     </pages>
 </playground>

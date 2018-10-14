@@ -34,6 +34,7 @@ func calculateHorizontalDistance(node: Node?, height: Int, map: inout [Int: [Int
 func printColumns(root: Node) {
     var map = [Int: [Int]]()
     calculateHorizontalDistance(node: root, height: 0, map: &map)
+
     for level in map {
         for height in level.value {
             print(height)
