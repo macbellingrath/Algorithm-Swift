@@ -3,7 +3,6 @@
 import Foundation
 
 
-
 public class Stack<T> {
 
     public init () {

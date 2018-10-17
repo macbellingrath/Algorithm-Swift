@@ -4,5 +4,6 @@
         <page name='Chapter 1 - Arrays and Strings'/>
         <page name='Chapter 1 continued'/>
         <page name='Stacks and Queues'/>
+        <page name='Trees and Graphs'/>
     </pages>
 </playground>
