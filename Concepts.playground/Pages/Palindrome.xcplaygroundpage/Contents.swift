@@ -11,28 +11,37 @@ extension String {
 
     /// Returns true if a string is a valid palindrome.
     var isPalindrome: Bool {
-        if isEmpty { return false }
+        let scalars = utf16
 
-        let scalars = unicodeScalars
+        if scalars.count < 2  { return true }
+
         var i = scalars.startIndex
         var j = scalars.index(before: scalars.endIndex)
         let charSet = CharacterSet.alphanumerics
 
         while i < j {
-            if !charSet.contains(scalars[i]) {
-                scalars.formIndex(after: &i) // i++
-            } else if !charSet.contains(scalars[j]) {
-                scalars.formIndex(before: &j) // j--
-            } else if String(scalars[i]).lowercased() != String(scalars[j]).lowercased() {
-                return false
-            } else  {
-                scalars.formIndex(after: &i)
-                scalars.formIndex(before: &j)
+
+            guard let left = Unicode.Scalar(scalars[i]), charSet.contains(left) else {
+                scalars.formIndex(after: &i) // i++ Unicode.Scalar.UTF16View is RandomAccessCollection, therefore the runtime is O(1)
+                continue
             }
+
+            guard let right = Unicode.Scalar(scalars[j]), charSet.contains(right) else {
+                scalars.formIndex(before: &j) // j-- ^
+                continue
+            }
+
+            guard String(left).lowercased() == String(right).lowercased() else {
+                return false
+            }
+
+            scalars.formIndex(after: &i)
+            scalars.formIndex(before: &j)
         }
 
         return true
     }
 }
+
 //: [Next](@next)
 
