@@ -80,5 +80,7 @@
         <page name='Tree Traversal Columns'/>
         <page name='Traverse Levels of Tree'/>
         <page name='Palindrome'/>
+        <page name='#20. Valid Parens'/>
+        <page name='896. Monotone Array'/>
     </pages>
 </playground>
