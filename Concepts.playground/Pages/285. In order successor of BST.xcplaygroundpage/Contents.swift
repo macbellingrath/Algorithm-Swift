@@ -1,7 +1,16 @@
 //: [Previous](@previous)
 
-import Foundation
+/*
+ Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
+ */
 
-var str = "Hello, playground"
+extension TreeNode {
+    
+    var inOrderSuccessor: TreeNode? {
+        return nil
+        // lowest node whose value is greater than self
+        
+    }
+}
 
 //: [Next](@next)

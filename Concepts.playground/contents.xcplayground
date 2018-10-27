@@ -82,5 +82,6 @@
         <page name='Palindrome'/>
         <page name='#20. Valid Parens'/>
         <page name='896. Monotone Array'/>
+        <page name='285. In order successor of BST'/>
     </pages>
 </playground>
