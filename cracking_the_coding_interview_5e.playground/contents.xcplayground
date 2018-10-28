@@ -5,5 +5,6 @@
         <page name='Chapter 1 continued'/>
         <page name='Stacks and Queues'/>
         <page name='Trees and Graphs'/>
+        <page name='Bit Manipulation'/>
     </pages>
 </playground>
