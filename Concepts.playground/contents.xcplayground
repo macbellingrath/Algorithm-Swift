@@ -83,5 +83,6 @@
         <page name='#20. Valid Parens'/>
         <page name='896. Monotone Array'/>
         <page name='285. In order successor of BST'/>
+        <page name='143. Re-order list'/>
     </pages>
 </playground>
