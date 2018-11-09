@@ -86,5 +86,6 @@
         <page name='143. Re-order list'/>
         <page name='412. FizzBuzz'/>
         <page name='371. Sum of Two Integers'/>
+        <page name='136. Single Number'/>
     </pages>
 </playground>
