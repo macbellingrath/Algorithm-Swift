@@ -87,5 +87,6 @@
         <page name='412. FizzBuzz'/>
         <page name='371. Sum of Two Integers'/>
         <page name='136. Single Number'/>
+        <page name='151. Reverse Words in a String'/>
     </pages>
 </playground>
