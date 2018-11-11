@@ -26,5 +26,22 @@ class Solution {
         }
         return true
     }
+    
+    func isMonotonic2(_ A: [Int]) -> Bool {
+        var isMonotoneIncreasing = true
+        var isMonotoneDecreasing = true
+        
+        for i in 1..<A.count {
+            if A[i] > A[i - 1] {
+                isMonotoneIncreasing = false
+            } else if A[i] < A[i - 1] {
+                isMonotoneDecreasing = false
+            }
+        }
+        
+        return isMonotoneIncreasing || isMonotoneDecreasing
+    }
+    
 }
+
 //: [Next](@next)
