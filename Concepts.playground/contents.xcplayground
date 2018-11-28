@@ -88,5 +88,7 @@
         <page name='371. Sum of Two Integers'/>
         <page name='136. Single Number'/>
         <page name='151. Reverse Words in a String'/>
+        <page name='Trimming Chars vs String Indexes'/>
+        <page name='451. Sort Characters By Frequency'/>
     </pages>
 </playground>

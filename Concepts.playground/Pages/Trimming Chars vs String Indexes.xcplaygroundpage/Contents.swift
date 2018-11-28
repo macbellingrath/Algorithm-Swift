@@ -1,7 +1,46 @@
 //: [Previous](@previous)
 
 import Foundation
-
+func ~= (l: String, r: String) -> Bool {
+    let p1 = l
+    let p2 = r
+    
+    var i = p1.startIndex
+    var j = p2.startIndex
+    
+    while i < p1.endIndex && j < p2.endIndex {
+        if p1[i] == "/" {
+            p1.formIndex(after: &i)
+        } else if p2[j] == "/" {
+            p2.formIndex(after: &j)
+        } else if p1[i] != p2[j] {
+            return false
+        } else {
+            p1.formIndex(after: &i)
+            p2.formIndex(after: &j)
+        }
+    }
+    
+    while i < p1.endIndex {
+        if p1[i] == "/" {
+            p1.formIndex(after: &i)
+        } else {
+            return false
+        }
+    }
+    
+    while j < p2.endIndex {
+        if p2[j] == "/" {
+            p2.formIndex(after: &j)
+        } else {
+            return false
+        }
+    }
+    
+    return true
+}
+"//" ~= "///"
+"//" ~= "//"
 extension String {
     var adPath_usingCharSet: String? {
         let result = self.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
@@ -15,7 +54,7 @@ extension String {
     
     var adPath_idx: String? {
         var result = self
-        
+   
         if result.hasPrefix("/") {
             var start = result.startIndex
             result.formIndex(after: &start)
@@ -70,6 +109,12 @@ extension String {
         }
         return self
     }
+    
+    var trimmed: String {
+        let i = last == "/" ? index(startIndex, offsetBy: 1) : startIndex
+        let j = first == "/" ? index(endIndex, offsetBy: -1): endIndex
+        return String(self[i..<j])
+    }
 }
 
 
@@ -83,6 +128,11 @@ func testTwo () {
     "/test".adPath_idx
     "/test/".adPath_idx
     "test/".adPath_idx
+}
+func trimmed() {
+    "/test".trimmed
+    "/test/".trimmed
+    "test/".trimmed
 }
 func other() {
     "/test".adKey()
@@ -99,92 +149,55 @@ for example in ["/test",
                 "/test/",
                 "",
                 "test/",
+                "/a/",
                 "/test/two",
                 "test/two/",
                 "some/test",
                 "/on/two/",
                 "±oneTwo/test"] {
-            
-//                var i = example.startIndex
-//                var j = example.endIndex
-//
-//                if i < example.endIndex, example[i] == "/" {
-//                    example.formIndex(after: &i)
-//                }
-//
-//                if j > i, example[example.index(before: j)] == "/" {
-//                    example.formIndex(before: &j)
-//                }
-//
-                // print(example[i..<j])
-                    print("input: \(example) - output: \(example.adKey())")
-                
-                    
-//                if example[start] == "/" {
-//                    example.formIndex(after: &start)
-//                }
-//
-//                if example[end] == "/" {
-//                    example.formIndex(before: &end)
-//                }
-//
-//                if start < end {
-//                    print(example[start...end])
-//                }
-//    if !test(example) {
-//        print("failed on \(example)")
-//    } else  {
-//        print(("test passed for \(example). Result is \(example.adPath_idx ?? "nil") "))
-//    }
+            print(example.trimmed)
 }
 
+compare(left: testOne, right: testTwo)
+compare(left: testOne, right: trimmed)
+compare(left: testTwo, right: testOne)
 
 //compare(left: testOne,
 //        right: testTwo)
 compare(left: testOne, right: other)
 compare(left: testTwo, right: other)
 
+
+
 //: [Next](@next)
 
 
-func ~= (l: String, r: String) -> Bool {
-    let p1 = l
-    let p2 = r
-
-    var i = p1.startIndex
-    var j = p2.startIndex
+// Test cases
+"/±/".trimmingCharacters(in: CharacterSet(charactersIn: "/")) ==  "/±".trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+"±/±".trimmingCharacters(in: CharacterSet(charactersIn: "/"))
+public extension String {
     
-    while i < p1.endIndex && j < p2.endIndex {
-        if p1[i] == "/" {
-            p1.formIndex(after: &i)
-        } else if p2[j] == "/" {
-            p2.formIndex(after: &j)
-        } else if p1[i] != p2[j] {
-            return false
-        } else {
-            p1.formIndex(after: &i)
-            p2.formIndex(after: &j)
-        }
+    /// Provides a copy of the current string with a trailing slash, if one does not already exist.
+    public var withTrailingSlash: String {
+        return hasSuffix("/") ? self : appending("/")
     }
     
-    while i < p1.endIndex {
-        if p1[i] == "/" {
-            p1.formIndex(after: &i)
-        } else {
-            return false
-        }
-    }
-    
-    while j < p2.endIndex {
-        if p2[j] == "/" {
-            p2.formIndex(after: &j)
-        } else {
-            return false
-        }
-    }
-    
-    return true
 }
-"/".trimmingCharacters(in: CharacterSet.init(charactersIn: "/"))
-"///" ~= "/////"
-// i          j
+
+public struct SectionPathCompare {
+    
+    /// Two section paths compare equal regardless of leading and trailing slashes.
+    ///
+    /// - Parameters:
+    ///   - l: a path
+    ///   - r: a path
+    /// - Returns: true if the substrings from each first non-`/` index to each strings last non-`/` index is equal
+    public static func equal(_ l: String, _ r: String) -> Bool {
+        return l.withTrailingSlash == r.withTrailingSlash
+    }
+    
+    private static let chars = CharacterSet(charactersIn: "/")
+}
+
+SectionPathCompare.equal("/±/", "/±")
+SectionPathCompare.equal("/", "")
