@@ -36,6 +36,15 @@ class Solution {
     func longestMountain(_ A: [Int]) -> Int {
         var longest = 0
         
+        // find `peaks`
+        var i = 0
+        var j = 1
+        
+        while i < A.count {
+            
+            
+            i += 1
+        }
         
         return longest
     }
