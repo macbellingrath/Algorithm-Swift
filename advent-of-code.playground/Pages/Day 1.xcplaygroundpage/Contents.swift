@@ -25,11 +25,34 @@ class Solution {
     func resultingFrequency(_ input: [Int]) -> Int {
         return input.reduce(0) { $0 + $1 }
     }
+    
+    // What is the first frequency your device reaches twice?
+    func firstFrequencyReachedTwice(_ input: [Int]) -> Int {
+        var res = 0
+        var set: Set<Int> = []
+        var i = 0
+        
+        while true { //(145801 times)
+            res += input[i]
+            if set.contains(res) {
+                return res
+            } else {
+                set.insert(res)
+            }
+            i += 1
+
+            if i == input.count {
+                i = 0
+            }
+        }
+        return res
+    }
 }
 
 
 let input = try testInput()
 let solution = Solution()
-solution.resultingFrequency(input) // 513
 
+solution.resultingFrequency(input) // 513
+solution.firstFrequencyReachedTwice(input) // 287
 //: [Next](@next)
