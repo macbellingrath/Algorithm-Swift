@@ -92,5 +92,7 @@
         <page name='451. Sort Characters By Frequency'/>
         <page name='845. Longest Mountain in Array'/>
         <page name='Binary Tree Postorder Traversal'/>
+        <page name='LRU'/>
+        <page name='36. Valid Sudoku'/>
     </pages>
 </playground>
