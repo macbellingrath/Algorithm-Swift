@@ -94,5 +94,6 @@
         <page name='Binary Tree Postorder Traversal'/>
         <page name='LRU'/>
         <page name='36. Valid Sudoku'/>
+        <page name='Binary Search a Matrix'/>
     </pages>
 </playground>
