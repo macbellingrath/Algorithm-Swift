@@ -29,6 +29,7 @@ func convert(representation: String, base: Int) -> Int {
 func convert(representation: String, base: Int, toBase newBase: Int) -> String {
     // convert to base 10 - O(n) time
     let base10 = convert(representation: representation, base: base)
+    print(base10)
     // convert to new base
     // divide base10 number by newBase
     var quotient = base10 / newBase
@@ -51,5 +52,5 @@ func convert(representation: String, base: Int, toBase newBase: Int) -> String {
 
 convert(representation: "1", base: 2)
 convert(representation: "10", base: 2, toBase: 4)
-convert(representation: "999", base: 10, toBase: 2)
+
 //: [Next](@next)
