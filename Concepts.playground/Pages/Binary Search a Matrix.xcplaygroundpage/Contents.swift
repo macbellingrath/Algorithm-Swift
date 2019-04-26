@@ -25,6 +25,15 @@ func binarySearchMatrix(matrix: [[CGRect]], target: CGRect) -> (r: Int, c: Int)?
     return nil
 }
 
+func search(_ items: [[CGRect]], target: CGRect) -> [CGRect] {
+    let rowCount = items.count
+    let columnCount = items.first?.count ?? 0
+
+    var left = (0,0)
+    var right = (0,0)
+
+}
+
 let len = 10
 let myRects = (0...3).map { r in
     return (0...3).map { c in
