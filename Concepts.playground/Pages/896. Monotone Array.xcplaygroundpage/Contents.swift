@@ -9,39 +9,18 @@
 
 class Solution {
     func isMonotonic(_ A: [Int]) -> Bool {
-        let count = A.count // compute once
+        var increasing = true
+        var decreasing = true
         var i = 1
-        while (i <= count - 1) && A[i - 1] == A[i] {
+
+        while i < A.count {
+            increasing = increasing && A[i - 1] <= A[i]
+            decreasing = decreasing && A[i - 1] >= A[i]
             i += 1
         }
-        
-        if i >= count { return true }
-        
-        
-        let compare: (Int, Int) -> Bool = (A[i - 1] < A[i]) ? (<=) : (>=)
-        
-        while i <= count - 1 {
-            if !(compare(A[i - 1], A[i])) { return false }
-            i += 1
-        }
-        return true
+        return increasing || decreasing
     }
-    
-    func isMonotonic2(_ A: [Int]) -> Bool {
-        var isMonotoneIncreasing = true
-        var isMonotoneDecreasing = true
-        
-        for i in 1..<A.count {
-            if A[i] > A[i - 1] {
-                isMonotoneIncreasing = false
-            } else if A[i] < A[i - 1] {
-                isMonotoneDecreasing = false
-            }
-        }
-        
-        return isMonotoneIncreasing || isMonotoneDecreasing
-    }
-    
+
 }
 
 //: [Next](@next)

@@ -96,5 +96,7 @@
         <page name='36. Valid Sudoku'/>
         <page name='Binary Search a Matrix'/>
         <page name='Convert Numeric Representation'/>
+        <page name='Sudoku Solver'/>
+        <page name='334. Increasing Triplet Subsequence'/>
     </pages>
 </playground>
