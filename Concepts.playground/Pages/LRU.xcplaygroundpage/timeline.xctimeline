@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Timeline
+   version = "3.0">
+   <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/macbellingrath/Code/Development/iOS/algorithms/algorithm-swift/Concepts.playground/Pages/LRU.xcplaygroundpage#CharacterRangeLen=0&amp;CharacterRangeLoc=1625&amp;EndingColumnNumber=0&amp;EndingLineNumber=84&amp;StartingColumnNumber=0&amp;StartingLineNumber=84&amp;Timestamp=586299243.987413"
+         lockedSize = "{458.7216796875, 50}"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/macbellingrath/Code/Development/iOS/algorithms/algorithm-swift/Concepts.playground/Pages/LRU.xcplaygroundpage#CharacterRangeLen=1&amp;CharacterRangeLoc=1625&amp;EndingColumnNumber=0&amp;EndingLineNumber=85&amp;StartingColumnNumber=0&amp;StartingLineNumber=84&amp;Timestamp=586299243.987542"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+   </TimelineItems>
+</Timeline>
