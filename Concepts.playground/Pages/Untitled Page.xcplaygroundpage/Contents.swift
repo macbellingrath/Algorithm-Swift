@@ -24,24 +24,19 @@ import Foundation
  [1,0,1]
  [1,2,1]
  */
+
+
 class Solution {
-    private func helper(index: Int, nums: [Int]) -> Bool {
-        if nums[index] >= nums.endIndex - 1 {
-            return true
-        } else if nums[index] == 0 {
-            return false
-        }
-
-        for jump in 1...nums[index] {
-            if helper(index: index + jump, nums: nums) {
-                return true
-            }
-        }
-        return false
-    }
-
     func canJump(_ nums: [Int]) -> Bool {
-        return helper(index: 0, nums: nums)
+        var i = 0
+        var reach = 0
+
+        while i < nums.count && i <= reach {
+            reach = max(reach, i + nums[i])
+            i += 1
+        }
+
+        return i == nums.count
     }
 
 }
@@ -50,13 +45,18 @@ class Solution {
 
 let testOne = [2,3,1,1,4]
 let testTwo = [3,2,1,0,4]
-
+let testThree = [1,0,0,0,4]
+let testFour = [1]
+let testFive = [1,1,1,1,1,1,0,1]
 // 0 - 3 - x
 // 0 - 2 - 3 - x
 // 0 - 1 - 2 - 3 - x
 // 0 - 1 - 3 - x
 let solution = Solution()
 //solution.canJump(testOne) == true
-solution.canJump(testOne) == false
+//solution.canJump(testTwo) == false
+//solution.canJump(testThree) == false
+//solution.canJump(testFour) == true
+solution.canJump(testFive) == false
 
 //: [Next](@next)
