@@ -104,5 +104,6 @@
         <page name='62. Unique Paths'/>
         <page name='Merge 2 Sorted Lists'/>
         <page name='Climb Stairs'/>
+        <page name='Reverse String'/>
     </pages>
 </playground>
