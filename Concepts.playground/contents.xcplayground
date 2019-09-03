@@ -105,5 +105,6 @@
         <page name='Merge 2 Sorted Lists'/>
         <page name='Climb Stairs'/>
         <page name='Reverse String'/>
+        <page name='Top K Frequent Elements'/>
     </pages>
 </playground>
