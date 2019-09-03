@@ -10,44 +10,24 @@ import Foundation
 
  */
 
-private struct Node: Comparable, Hashable {
-    var key: Int
-    var count: Int
-
-    static func < (lhs: Node, rhs: Node) -> Bool {
-        return lhs.count < rhs.count
-    }
-
-    static func > (lhs: Node, rhs: Node) -> Bool {
-        return lhs.count > rhs.count
-    }
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(key)
-    }
-
-}
 
 class Solution {
     func topKFrequent(_ nums: [Int], _ k: Int) -> [Int] {
-        var counts: [Int: Node] = [:]
-        var maxHeap = PriorityQueue<Node>(sort: >)
-
+        var buckets = [[Int]](repeating: [], count: nums.count + 1)
+        var frequencies: [Int: Int] = [:]
         for num in nums {
-            if var node = counts[num], let index = maxHeap.index(of: node) {
-                node.count += 1
-                counts[num] = node
-                maxHeap.changePriority(index: index, value: node)
-            } else {
-                let node = Node(key: num, count: 1)
-                counts[num] = node
-                maxHeap.enqueue(node)
-            }
+            frequencies[num] = frequencies[num, default: 0] + 1
+        }
+
+        for (key, frequency) in frequencies {
+            buckets[frequency].append(key)
         }
 
         var res: [Int] = []
-        while res.count < k, let node = maxHeap.dequeue() {
-            res.append(node.key)
+        var j = buckets.count - 1
+        while j >= 0, res.count < k {
+            res.append(contentsOf: buckets[j])
+            j -= 1
         }
 
         return res
@@ -63,5 +43,14 @@ func testOne() {
     topK == [1,2]
 }
 testOne()
+
+// test 2
+func testTwo() {
+    let nums = [1]
+    let k = 1
+    let topK = solution.topKFrequent(nums, k)
+    topK == [1]
+}
+testTwo()
 
 //: [Next](@next)
