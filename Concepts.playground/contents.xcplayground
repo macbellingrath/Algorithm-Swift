@@ -106,5 +106,7 @@
         <page name='Climb Stairs'/>
         <page name='Reverse String'/>
         <page name='Top K Frequent Elements'/>
+        <page name='Valid Palindrome II'/>
+        <page name='238. Product of Array except self'/>
     </pages>
 </playground>
