@@ -33,6 +33,7 @@ class Solution {
 
         return res
     }
+    
 }
 Solution().productExceptSelf([1,2,3,4])
 

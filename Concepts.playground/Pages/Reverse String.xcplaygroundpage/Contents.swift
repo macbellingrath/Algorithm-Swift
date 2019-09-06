@@ -25,4 +25,22 @@ let s = Solution()
 var chars: [Character] = ["h", "e", "l", "l", "o"]
 s.reverseString(&chars)
 print(chars)
+
+
+extension MutableCollection {
+    mutating func myReverse() {
+        let mid = index(startIndex, offsetBy: count / 2)
+        var i = startIndex
+        while i < mid {
+            swapAt(i, index(endIndex, offsetBy: -(count - 1 - distance(from: startIndex, to: i))))
+
+            formIndex(after: &i)
+        }
+    }
+}
+
+var emptyChars:[Character] = []
+emptyChars.myReverse()
+var hello: [Character] = ["h", "e", "l", "l", "o"]
+hello.myReverse()
 //: [Next](@next)

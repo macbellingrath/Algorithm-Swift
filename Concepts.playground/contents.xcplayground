@@ -108,5 +108,6 @@
         <page name='Top K Frequent Elements'/>
         <page name='Valid Palindrome II'/>
         <page name='238. Product of Array except self'/>
+        <page name='41. First Missing Positive'/>
     </pages>
 </playground>
