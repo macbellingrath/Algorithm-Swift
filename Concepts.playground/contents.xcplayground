@@ -109,5 +109,6 @@
         <page name='Valid Palindrome II'/>
         <page name='238. Product of Array except self'/>
         <page name='41. First Missing Positive'/>
+        <page name='Delete Node in Singly-Linked List'/>
     </pages>
 </playground>
