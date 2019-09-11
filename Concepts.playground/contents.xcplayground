@@ -110,5 +110,6 @@
         <page name='238. Product of Array except self'/>
         <page name='41. First Missing Positive'/>
         <page name='Delete Node in Singly-Linked List'/>
+        <page name='Power Set'/>
     </pages>
 </playground>
