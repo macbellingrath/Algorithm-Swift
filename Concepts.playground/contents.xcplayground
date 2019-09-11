@@ -111,5 +111,6 @@
         <page name='41. First Missing Positive'/>
         <page name='Delete Node in Singly-Linked List'/>
         <page name='Power Set'/>
+        <page name='Majority Element'/>
     </pages>
 </playground>
