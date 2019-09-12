@@ -112,5 +112,6 @@
         <page name='Delete Node in Singly-Linked List'/>
         <page name='Power Set'/>
         <page name='Majority Element'/>
+        <page name='242. Valid Anagram'/>
     </pages>
 </playground>
