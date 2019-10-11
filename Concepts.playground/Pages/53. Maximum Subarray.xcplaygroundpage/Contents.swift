@@ -16,12 +16,15 @@ class Solution {
 
         var dp = [nums[0]]
         var i = 1
+        var res = nums[0]
+
         while i < nums.count {
           dp.append(max(dp[i - 1] + nums[i], nums[i]))
+          res = max(res, dp[i])
           i += 1
         }
 
-        return dp.max()!
+        return res
     }
 }
 
