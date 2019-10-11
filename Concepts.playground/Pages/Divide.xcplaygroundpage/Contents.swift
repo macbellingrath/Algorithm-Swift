@@ -2,54 +2,55 @@
 
 import Foundation
 
+infix operator ^
+func ^ (l: Bool, r: Bool) -> Bool {
+    return l != r
+}
+
+// e.g.
+(true ^ true) == false
+(true ^ false) == true
+(false ^ true) == true
+(false ^ false) == false
+
 /*
  Divide two integers without using multiplication, division and mod operator.
 
  If it is overflow, return MAX_INT.
+ Both dividend and divisor will be 32-bit signed integers.
+ The divisor will never be 0.
+ Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. For the purpose of this problem, assume that your function returns 231 − 1 when the division result overflows.
  */
 
 class Solution {
-
     func divide(_ dividend: Int, _ divisor: Int) -> Int {
-        if ((divisor == 0) ||
-            (dividend == .min && divisor == -1)) {
-            return .max
+        if dividend == Int32.min, divisor == -1 {
+            return Int(Int32.max)
         }
 
-        let isNegative = (dividend < 0 && !(divisor < 0)) ||
-            (!(dividend < 0) && divisor < 0)
+        var dividend = dividend
+        var divisor = divisor
 
-        var answer = 0
+        let sign = (dividend < 0) ^ (divisor < 0) ? -1 : 1
+        dividend = abs(dividend)
+        divisor = abs(divisor)
 
-        var dividend = abs(dividend)
-        let divisor = abs(divisor)
+        var quotient = 0
+        var temp = 0
 
-        while dividend >= divisor {
-            var temp = divisor
-            var multiple = 1
-
-            while dividend >= (temp << 1) {
-                multiple <<= 1
-                temp <<= 1
+        for i in stride(from: Int32.bitWidth - 1, through: 0, by: -1) {
+            if (temp + (divisor << i)) <= dividend {
+                temp += (divisor << i)
+                quotient |= 1 << i
             }
-
-            answer += multiple
-            dividend -= temp
         }
 
-
-        return  isNegative ? -answer : answer
+        return sign * quotient
     }
 }
 
-// test
-let s = Solution()
-//s.divide(10, 3)
-//s.divide(0, 2)
-//s.divide(0, 0)
-//s.divide(1, -1)
+let solution = Solution()
 
-s.divide(
-    -2147483648,
-    -1)
+solution.divide(10, 3) == 3
 //: [Next](@next)
+Int32.min

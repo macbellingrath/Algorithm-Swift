@@ -33,43 +33,7 @@ public class ListNode: CustomStringConvertible {
 }
 
 
-class Solution {
-    func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-        let dummy = ListNode(0)
-        var current:ListNode? = dummy
-
-        var p = l1
-        var q = l2
-
-        var carry = 0
-
-        // iterate (O (max (len(l1), len(l2))))
-        while (p != nil || q != nil) {
-            let x = p?.val ?? 0
-            let y = q?.val ?? 0
-
-            let sum = x + y + carry
-
-            // carry one or zero
-            carry = sum / 10
-
-            // create new node
-            current?.next = ListNode(sum % 10)
-            current = current?.next
-
-            // advance p and q
-            p = p?.next
-            q = q?.next
-        }
-
-        // if carry left with one
-        if carry > 0 {
-            current?.next = ListNode(carry)
-        }
-
-        return dummy.next
-    }
-}
+ 
 
 
 let s = Solution()
