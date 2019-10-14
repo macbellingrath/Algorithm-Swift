@@ -99,5 +99,21 @@
         <page name='Sudoku Solver'/>
         <page name='334. Increasing Triplet Subsequence'/>
         <page name='53. Maximum Subarray'/>
+        <page name='41. First Missing Positive'/>
+        <page name='62. Unique Paths'/>
+        <page name='91. Decode Ways'/>
+        <page name='238. Product of Array except self'/>
+        <page name='242. Valid Anagram'/>
+        <page name='Climb Stairs'/>
+        <page name='Delete Node in Singly-Linked List'/>
+        <page name='Goat Latin'/>
+        <page name='Majority Element'/>
+        <page name='Merge 2 Sorted Lists'/>
+        <page name='Power Set'/>
+        <page name='Reverse String'/>
+        <page name='Top K Frequent Elements'/>
+        <page name='162. Peak Element'/>
+        <page name='Untitled Page'/>
+        <page name='Valid Palindrome II'/>
     </pages>
 </playground>
