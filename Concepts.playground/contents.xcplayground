@@ -113,5 +113,6 @@
         <page name='Power Set'/>
         <page name='Majority Element'/>
         <page name='242. Valid Anagram'/>
+        <page name='171. Excel Sheet Column Number'/>
     </pages>
 </playground>
