@@ -119,5 +119,8 @@
         <page name='162. Peak Element'/>
         <page name='387. First Unique Character in a String'/>
         <page name='66. Plus One'/>
+        <page name=' 287. Find the Duplicate Number'/>
+        <page name='Group Anagrams'/>
+        <page name='350. Intersection of Two Arrays II'/>
     </pages>
 </playground>
