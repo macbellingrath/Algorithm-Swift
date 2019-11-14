@@ -32,29 +32,23 @@
  Your runtime complexity should be less than O(n2).
  There is only one duplicate number in the array, but it could be repeated more than once.
  */
-func factorial(_ n: Int) -> Int {
-    var product = 1
-    for num in stride(from: n, to: 0, by: -1) {
-        product *= num
-    }
-    return product
-}
-
 class Solution {
     func findDuplicate(_ nums: [Int]) -> Int {
-        var product = 1
-        for num in nums {
-            product *= num
+        guard nums.count > 1 else { return -1 }
+
+        var slow = nums[0]
+        var fast = nums[nums[0]]
+        while slow != fast {
+            slow = nums[slow]
+            fast = nums[nums[fast]]
         }
 
-        for num in nums {
-            if product / num != num {
-                return num
-            } else {
-                product /= num
-            }
+        fast = 0
+        while fast != slow {
+            slow = nums[slow]
+            fast = nums[fast]
         }
-        return -1
+        return slow
     }
 
 }
