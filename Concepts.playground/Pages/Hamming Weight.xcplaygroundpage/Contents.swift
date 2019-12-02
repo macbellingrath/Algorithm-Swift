@@ -12,6 +12,7 @@ class Solution {
             }
             num <<= 1
         }
+        
         return res
     }
 
@@ -28,4 +29,4 @@ class Solution {
 
 let s = Solution()
 s.hammingWeight(0x00000000000000000000000000001011)
-//: [Next](@next)
+//: [Next](@next)e

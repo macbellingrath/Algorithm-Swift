@@ -124,5 +124,6 @@
         <page name='350. Intersection of Two Arrays II'/>
         <page name='Word Break'/>
         <page name='Hamming Weight'/>
+        <page name='Implement Queue using Stacks'/>
     </pages>
 </playground>
