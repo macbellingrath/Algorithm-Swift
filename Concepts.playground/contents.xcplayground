@@ -125,5 +125,6 @@
         <page name='Word Break'/>
         <page name='Hamming Weight'/>
         <page name='Implement Queue using Stacks'/>
+        <page name='Word Search'/>
     </pages>
 </playground>
