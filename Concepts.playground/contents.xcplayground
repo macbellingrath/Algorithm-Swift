@@ -126,5 +126,6 @@
         <page name='Hamming Weight'/>
         <page name='Implement Queue using Stacks'/>
         <page name='Word Search'/>
+        <page name='Symmetric Tree'/>
     </pages>
 </playground>
