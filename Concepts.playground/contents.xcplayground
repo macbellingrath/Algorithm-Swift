@@ -127,5 +127,6 @@
         <page name='Implement Queue using Stacks'/>
         <page name='Word Search'/>
         <page name='Symmetric Tree'/>
+        <page name='Sort Linked List'/>
     </pages>
 </playground>

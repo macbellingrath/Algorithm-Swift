@@ -41,4 +41,7 @@ class Solution {
     }
 }
 
+func makeObject(_ withInfo: [String: Any] = [:]) {
+}
+
 //: [Next](@next)

@@ -20,3 +20,14 @@ extension ListNode: Equatable {
     }
 }
 
+
+extension ListNode: CustomStringConvertible {
+    public var description: String {
+        var res = "\(self.val)"
+
+        if let next = self.next {
+            res.append(contentsOf: " -> \(next.description)")
+        }
+        return res
+    }
+}
