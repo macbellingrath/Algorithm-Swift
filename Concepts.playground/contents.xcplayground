@@ -128,5 +128,6 @@
         <page name='Word Search'/>
         <page name='Symmetric Tree'/>
         <page name='Sort Linked List'/>
+        <page name='Pascal&apos;s Triangle'/>
     </pages>
 </playground>

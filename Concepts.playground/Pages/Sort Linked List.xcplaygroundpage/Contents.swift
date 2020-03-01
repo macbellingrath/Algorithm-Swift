@@ -62,7 +62,7 @@ class Solution {
 
 let head = ListNode(Int.random(in: 0..<100))
 var current: ListNode? = head
-for i in 1...10 {
+for _ in 1...10 {
     let rand = Int.random(in: -100..<100)
     current?.next = ListNode(rand)
     current = current?.next
